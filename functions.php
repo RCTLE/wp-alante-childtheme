@@ -9,3 +9,34 @@ function my_theme_enqueue_styles() {
     );
 	wp_enqueue_style( 'alantepro-child-theme-fonts', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' );
 }
+
+
+// Add Google Analytics to header
+function rctle_google_analytics() { ?>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-KQ2C73M4MQ"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-KQ2C73M4MQ');
+	</script>
+    <?php
+}      
+add_action( 'wp_head', 'rctle_google_analytics', 10 );
+
+// Rob added 2019-11-15
+function wpb_widgets_init() {
+    register_sidebar( array(
+        'name'          => 'Custom Header Widget Area',
+        'id'            => 'custom-header-widget',
+        'before_widget' => '',
+        'after_widget'  => '',
+        'before_title'  => '<h2>',
+        'after_title'   => '</h2>',
+    ) );
+ 
+}
+add_action( 'widgets_init', 'wpb_widgets_init' );
+add_filter( 'pre_option_link_manager_enabled', '__return_true' );
