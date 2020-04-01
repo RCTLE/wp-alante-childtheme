@@ -8,6 +8,7 @@
 /* ----------------------------------------------------------------------------------
 	ENABLE SLIDER - HOMEPAGE & INNER-PAGES
 ---------------------------------------------------------------------------------- */
+$slide_class_parallax = '';
 
 // Add full width slider class to body
 function thinkup_input_sliderclass($classes){
