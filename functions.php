@@ -7,5 +7,5 @@ function my_theme_enqueue_styles() {
       array('parent-style'),
       wp_get_theme()->get('Version')
     );
+	wp_enqueue_style( 'alantepro-child-theme-fonts', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' );
 }
-

@@ -145,6 +145,17 @@ a {
 #header .menu > li > a:hover span:first-child {
 	color: #8A743E;
 }
+#header .header-links > ul > li.menu-parent:after {
+	position: absolute;
+	font-family: FontAwesome;
+	content: "\f107";
+	right: 2px;
+	top: 40%;
+	right: 20px;
+	left: auto;
+	bottom: 0;
+}
+
 #slider .rslides-content.style2 .featured-link a,
 .thinkupslider-sc .rslides-content.style2 .featured-link a {
 	font-weight: 700;
