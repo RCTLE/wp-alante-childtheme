@@ -581,3 +581,12 @@ ul.iconfont i {
 	margin: 0 auto;
 	width: 100%;
 }
+
+.card-header.collapsed {
+    background:#ccc;
+}
+.card-header:not(.collapsed) {
+    background:#8A743E;
+	width: 80%;
+	margin-top: -10px;
+}
