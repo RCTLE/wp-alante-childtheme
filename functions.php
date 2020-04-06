@@ -40,3 +40,38 @@ function wpb_widgets_init() {
 }
 add_action( 'widgets_init', 'wpb_widgets_init' );
 add_filter( 'pre_option_link_manager_enabled', '__return_true' );
+
+// added to address canonical urls
+/* Begin Rel-canonical by custom fields */
+// A copy of rel_canonical but to allow an override on a custom tag
+function rel_canonical_with_custom_tag_override()
+{
+ if( !is_singular() )
+ return;
+
+ global $wp_the_query;
+ if( !$id = $wp_the_query->get_queried_object_id() )
+ return;
+
+ // check whether the current post has content in the "canonical_url" custom field
+ $canonical_url = get_post_meta( $id, 'canonical_url', true );
+ if( '' != $canonical_url )
+ {
+ // trailing slash functions copied from http://core.trac.wordpress.org/attachment/ticket/18660/canonical.6.patch
+ $link = user_trailingslashit( trailingslashit( $canonical_url ) );
+ }
+ else
+ {
+ $link = get_permalink( $id );
+ }
+ echo "<link rel='canonical' href='" . esc_url( $link ) . "' />\n";
+}
+
+// remove the default WordPress canonical URL function
+if( function_exists( 'rel_canonical' ) )
+{
+ remove_action( 'wp_head', 'rel_canonical' );
+}
+// replace the default WordPress canonical URL function with your own
+add_action( 'wp_head', 'rel_canonical_with_custom_tag_override' );
+/* End Rel-canonical by custom fields */
