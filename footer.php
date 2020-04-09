@@ -54,6 +54,16 @@
 </div><!-- #body-core -->
 
 <?php wp_footer(); ?>
+<script>
+	document.getElementsByClassName('tribe-events-gcal')[0].setAttribute('target', '_blank');
+	document.getElementsByClassName('tribe-events-gcal')[0].setAttribute('rel', 'nofollow');
+	document.getElementsByClassName('tribe-events-gcal')[0].innerHTML='+ Google Calendar';
+	
+	document.getElementsByClassName('tribe-events-ical')[0].setAttribute('target', '_blank');
+	document.getElementsByClassName('tribe-events-ical')[0].setAttribute('rel', 'nofollow');
+	document.getElementsByClassName('tribe-events-ical')[0].innerHTML='+ iCal Export';
+
+</script>
 
 </body>
 </html>
