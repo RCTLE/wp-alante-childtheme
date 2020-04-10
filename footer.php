@@ -63,6 +63,7 @@
 	document.getElementsByClassName('tribe-events-ical')[0].setAttribute('rel', 'nofollow');
 	document.getElementsByClassName('tribe-events-ical')[0].innerHTML='+ iCal Export';
 
+	document.getElementsByClassName('hover-zoom')[0].innerHTML='Zoom Photo';
 </script>
 
 </body>
