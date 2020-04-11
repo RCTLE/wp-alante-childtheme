@@ -75,3 +75,6 @@ if( function_exists( 'rel_canonical' ) )
 // replace the default WordPress canonical URL function with your own
 add_action( 'wp_head', 'rel_canonical_with_custom_tag_override' );
 /* End Rel-canonical by custom fields */
+
+
+add_theme_support( 'align-wide' );
