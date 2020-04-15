@@ -385,6 +385,23 @@ ul.iconfont i {
 	font-size: 90%;
 	margin: 0 15px 0 -22px;
 }
+.notification {
+	overflow: hidden;
+	margin-bottom: 20px;
+	border: none;
+	text-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	-ms-box-shadow: none;
+	-o-box-shadow: none;
+	box-shadow: none;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	-ms-border-radius: 2px;
+	-o-border-radius: 2px;
+	border-radius: 2px;
+}
+
 .notification .icon:before {
 	display: none !important;
 	border: solid rgba(0, 0, 0, 0);
@@ -395,6 +412,14 @@ ul.iconfont i {
 	border-width: 12px;
 	content: " ";
 }
+
+.notification,          .notification.normal   { background: #f4f4f4; }
+.notification.download, .notification.success  { color: #fff; background: #c1dd5d; border-color: #c1dd5d; }
+.notification.error,    .notification.stop     { color: #fff; background: #e5736a; border-color: #e5736a; }
+.notification.info,     .notification.question { color: #000; background: #83bdea; border-color: #83bdea  }
+.notification.warning,  .notification.message  { color: #fff; background: #e6cc50; border-color: #e6cc50; }
+
+
 .pricing-table i {
 	color: #8A743E;
 	position: absolute;
