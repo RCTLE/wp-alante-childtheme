@@ -70,10 +70,13 @@ h6 {
 	font-size: 100%;
 }
 
+.menu-item a {
+	text-decoration: none !important;
+}
 a {
 	color: #00549a;
 	cursor: pointer;
-	text-decoration: none;
+	text-decoration: underline;
 	outline: 0 none;
 	-webkit-transition: all 0.3s ease;
 	-moz-transition: all 0.3s ease;
