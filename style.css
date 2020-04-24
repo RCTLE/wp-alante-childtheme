@@ -632,3 +632,6 @@ ul.iconfont i {
     padding: 5px;
 	background-color: #eee;
 }
+#eckb-article-right-sidebar {
+	display:none;
+}
