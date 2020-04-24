@@ -628,3 +628,7 @@ ul.iconfont i {
 	padding-left:40px;
 }
 
+#eckb-article-page-container-v2 .eckb-article-content-footer__article-meta {
+    padding: 5px;
+	background-color: #eee;
+}
