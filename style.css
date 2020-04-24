@@ -635,3 +635,6 @@ ul.iconfont i {
 #eckb-article-right-sidebar {
 	display:none;
 }
+.page-numbers span {
+	display:none !important;
+}
