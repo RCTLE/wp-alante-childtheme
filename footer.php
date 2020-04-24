@@ -66,5 +66,12 @@
 	document.getElementsByClassName('hover-zoom')[0].innerHTML='Zoom Photo';
 </script>
 
+<?php if (is_singular( 'tribe_events' )): ?>
+<script>
+	document.getElementsByClassName('tribe-events-before-html')[0].style.display = 'none';
+</script>
+<?php endif; ?>	
+
+
 </body>
 </html>
