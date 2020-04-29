@@ -78,3 +78,11 @@ add_action( 'wp_head', 'rel_canonical_with_custom_tag_override' );
 
 
 add_theme_support( 'align-wide' );
+
+
+// Deactivate the Echo Kb CSS
+add_action( 'wp_enqueue_scripts', 'remove_default_stylesheet', 20 );
+function remove_default_stylesheet() {
+    wp_dequeue_style( 'epkb-public-styles' );
+    wp_deregister_style( 'epkb-public-styles' );
+ }
