@@ -638,6 +638,11 @@ ul.iconfont i {
 .page-numbers span {
 	display:none !important;
 }
+figcaption {
+	font-size: 80%;
+	color: #bbb;
+}
+
 
 
 /* CSS for Echo Kb Plugin */
