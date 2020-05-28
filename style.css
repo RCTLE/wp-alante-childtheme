@@ -29,6 +29,7 @@ textarea {
 	font-size: 15px;
 	line-height: 1.7;
 	word-wrap: break-word;
+	overflow-x:  hidden;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -620,12 +621,19 @@ ul.iconfont i {
 }
 
 
-.alignfull {
+.alignwide, .alignfull {
 	margin: 32px calc(50% - 50vw);
 	max-width: 100vw;
-	width: 100vw;
-	padding:5px;
-	padding-left:40px;
+	width: 99vw;
+	padding:15px;
+}
+
+@media (max-width: 920px) {
+	.alignwide {
+		margin: 32px calc( ( 767px - 920px ) / 2 );
+		max-width: 920px;
+		width: 920px;
+	}
 }
 
 #eckb-article-page-container-v2 .eckb-article-content-footer__article-meta {
@@ -642,7 +650,6 @@ figcaption {
 	font-size: 80%;
 	color: #bbb;
 }
-
 
 
 /* CSS for Echo Kb Plugin */
