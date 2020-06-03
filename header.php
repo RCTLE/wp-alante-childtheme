@@ -21,6 +21,7 @@
 <link rel="pingback" href="<?php esc_url( bloginfo( 'pingback_url' ) ); ?>" />
 
 <?php wp_head(); ?>
+<script src="https://kit.fontawesome.com/3e56e0b7a1.js" crossorigin="anonymous"></script>
 </head>
 
 <body <?php body_class(); ?><?php thinkup_bodystyle(); ?>>
