@@ -62,16 +62,19 @@ h2 {
 }
 h3 {
 	font-size: 130%;
-	font-weight:500;
+	font-weight:700;
 }
 h4 {
 	font-size: 120%;
+	font-weight:700;
 }
 h5 {
 	font-size: 110%;
+	font-weight:700;
 }
 h6 {
 	font-size: 100%;
+	font-weight:700;
 }
 
 .menu-item a {
@@ -632,7 +635,7 @@ ul.iconfont i {
 	padding-bottom:7px
 }
 
-.alignfull h1, h2, h3, h4, h5, h6 {
+.alignfull h1, .alignfull h2, .alignfull h3, .alignfull h4, .alignfull h5, .alignfull h6 {
 	margin-left:40px;
 }
 .alignfull p {
