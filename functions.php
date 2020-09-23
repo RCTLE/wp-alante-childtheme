@@ -86,3 +86,15 @@ function remove_default_stylesheet() {
     wp_dequeue_style( 'epkb-public-styles' );
     wp_deregister_style( 'epkb-public-styles' );
  }
+
+
+// Add back jquery-migrate which was dropped in WP 5.5
+function wpdocs_selectively_enqueue_admin_script( $hook ) {
+    if ( 'admin.php' == $hook ) {
+        return;
+    }
+    wp_enqueue_script( 'my_custom_script', get_stylesheet_directory_uri() . '/jquery-migrate.min.js', array(), '1.0' );
+}
+add_action( 'admin_enqueue_scripts', 'wpdocs_selectively_enqueue_admin_script' );
+
+
